@@ -1,0 +1,493 @@
+name: Centric Brands
+description: >-
+  Centric Brands LLC is a New York-headquartered global lifestyle brand
+  management and product-development platform formed in October 2018 when
+  Differential Brands Group (NASDAQ: DFBG) acquired Global Brands Group's
+  $1.2B North American licensing business. The company designs, sources,
+  markets, and distributes apparel, accessories, footwear, beauty, and
+  entertainment-licensed products across men's, women's, kids', accessories,
+  and entertainment segments. Its mission is "to be a leading global apparel
+  & accessories company with a portfolio of iconic licensed and owned
+  brands that delight retailers and consumers of all ages." Centric filed
+  for Chapter 11 bankruptcy on May 18, 2020 and emerged in October 2020
+  under control of secured creditors led by Blackstone's GSO Capital
+  Partners, Ares Management, and HPS Investment Partners. The company is
+  led by CEO Jason Rabin (since 2018) and operates ~20 global offices
+  across New York (HQ), Los Angeles, Greensboro, Montreal, London,
+  Amsterdam, Hong Kong, and multiple cities in China, Bangladesh,
+  Cambodia, India, and Vietnam. Owned brands include Hudson Jeans,
+  Buffalo Jeans, Robert Graham, Joe's Jeans, Hervé Léger, Favorite
+  Daughter, and AllSaints; licensed apparel brands include Calvin Klein,
+  Tommy Hilfiger, Nautica, Spyder, IZOD, Van Heusen, Kate Spade New York,
+  Coach, Michael Kors, Frye, Timberland, Lucky Brand, Juicy Couture,
+  Under Armour, and Off-White; the entertainment licensing portfolio
+  spans 70+ properties including Disney, Marvel, Warner Bros., DC,
+  Nintendo, Hasbro, Mattel, Nickelodeon, Netflix, Pokémon, Sanrio,
+  Paw Patrol, and the NFL/MLB/NBA/NHL via Sports & Entertainment
+  Licensing. Centric Brands operates "11 end-to-end Ecommerce sites,"
+  a 3D design and art studio in Greensboro, and a New York City
+  photo/video studio. The company has no public developer program,
+  no documented public APIs, and no public source code repositories;
+  its two namesake GitHub organizations (centric-brands, Centricbrands)
+  are private placeholders with zero public repos.
+image: https://avatars.githubusercontent.com/u/192396914?v=4
+url: https://www.centricbrands.com
+modified: '2026-05-23'
+created: '2026-05-23'
+specificationVersion: '0.20'
+tags:
+  - Apparel
+  - Accessories
+  - Footwear
+  - Beauty
+  - Kids
+  - Lifestyle
+  - Brand Management
+  - Licensing
+  - Entertainment Licensing
+  - Sports Licensing
+  - Fashion
+  - Consumer Products
+  - Fortune 1000
+  - Private Equity Owned
+apis: []
+common:
+  - type: Portal
+    url: https://www.centricbrands.com
+  - type: About
+    url: https://centricbrands.com/about/
+  - type: Leadership
+    url: https://centricbrands.com/leadership/
+  - type: Mission
+    url: https://centricbrands.com/mission-the-4-cs/
+  - type: Capabilities
+    url: https://centricbrands.com/capabilities/
+  - type: Offices
+    url: https://centricbrands.com/offices/
+  - type: Blog
+    url: https://centricbrands.com/news/
+  - type: PressReleases
+    url: https://centricbrands.com/press-releases/
+  - type: Careers
+    url: https://careers-centricbrands.icims.com/
+  - type: GitHubOrganization
+    url: https://github.com/centric-brands
+  - type: GitHubOrganization
+    url: https://github.com/Centricbrands
+  - type: Philanthropy
+    url: https://centricbrands.com/philanthropy/
+  - type: EmployeeResourceGroups
+    url: https://centricbrands.com/employee-resource-groups/
+  - type: Features
+    data:
+      - name: Brand Centric
+        description: >-
+          Creative, multi-faceted brand stewardship committed to "protecting
+          our brands' DNA by generating long-term value" for partners and
+          licensors. First of the company's "4 Cs."
+      - name: Business Centric
+        description: >-
+          Operational-excellence platform described as "the foundation for
+          a transformational organization – the platform that enables
+          superior end-to-end agility." Second of the "4 Cs."
+      - name: Customer Centric
+        description: >-
+          Consumer-driven product and merchandising model delivering
+          "unparalleled customer solutions that generate remarkable
+          performance and exceptional experiences." Third of the "4 Cs."
+      - name: People Centric
+        description: >-
+          Talent and culture program emphasizing a "dynamic, transparent,
+          and unified culture." Fourth of the "4 Cs."
+      - name: 3D Design and Art Studio
+        description: >-
+          Greensboro, NC creative facility producing 3D design and art
+          assets across the brand portfolio, part of Centric's "expansive
+          creative resources."
+      - name: Photo and Video Studio
+        description: >-
+          New York City "state-of-the-art photo and video studio" used for
+          campaign, e-commerce, and brand content production.
+      - name: 11 End-to-End Ecommerce Sites
+        description: >-
+          Direct-to-consumer e-commerce operations running across eleven
+          brand sites with full merchandising, fulfillment, and CX scope.
+      - name: Global Sourcing Network
+        description: >-
+          Diversified Asia-anchored supply chain with offices in Hong Kong,
+          China (Guangzhou, Hangzhou, Qingdao, Shanghai, Shenzhen, Zhuji),
+          Bangladesh, Cambodia, India, and Vietnam. Partnerships with the
+          International Labor Organization and Better Work for compliance.
+      - name: Sports & Entertainment Licensing Group
+        description: >-
+          Dedicated licensing division (led by Janice Brown since 2018)
+          handling 70+ entertainment, sports, character, and CPG licensed
+          IP for accessories and beauty.
+      - name: Asia Operating Region
+        description: >-
+          Regional management hub for Greater China and Southeast Asia
+          sourcing/manufacturing, led by President Marc Compagnon (since
+          March 2022).
+      - name: EMEA Operating Region
+        description: >-
+          European, Middle East, and Africa region with London and
+          Amsterdam offices, led by Managing Director Will van Rensburg.
+      - name: Luxury and Streetwear Division
+        description: >-
+          Premium-tier division led by Andrew Berg, overseeing labels
+          "including Robert Graham, Avirex, Off White, Herve Leger."
+      - name: Lifestyle Division
+        description: >-
+          Operating division led by President Brent Unger since October
+          2023, covering mainstream lifestyle apparel brands.
+      - name: Accessories Group
+        description: >-
+          Largest single product group, led by Group President Jarrod Kahn
+          since October 2018; spans 40+ licensed and owned accessories
+          brands across handbags, small leather goods, watches, eyewear,
+          hosiery, and headwear.
+      - name: Kids Division
+        description: >-
+          Children's apparel division led by President Rob Smith,
+          "responsible for leading the Division across all global brands
+          and categories."
+      - name: Social Compliance Program
+        description: >-
+          Internal social-compliance team (recently spotlighted in
+          February 2026 news) monitoring factory ethics, labor standards,
+          and ESG criteria across the Asia sourcing base.
+  - type: BrandPortfolio
+    data:
+      - name: Owned Brands - Denim
+        description: >-
+          Hudson Jeans, Buffalo Jeans, Joe's Jeans - premium and contemporary
+          denim brands owned outright by Centric.
+      - name: Owned Brands - Premium / Streetwear
+        description: >-
+          Robert Graham, Hervé Léger, Favorite Daughter, Avirex - owned
+          luxury, contemporary women's, and heritage streetwear labels.
+      - name: Owned Brands - Other
+        description: >-
+          AllSaints (per acquisition history), Swims, Jennifer Fisher
+          (acquired early 2024) - owned lifestyle and accessories labels.
+      - name: Licensed Apparel - Heritage Americana
+        description: >-
+          Calvin Klein, Tommy Hilfiger, Nautica, IZOD, Van Heusen, Chaps,
+          Jones New York - long-term licenses for mass and mid-tier
+          apparel and accessories under heritage U.S. labels.
+      - name: Licensed Apparel - Active / Outdoor
+        description: >-
+          Spyder, Under Armour, Timberland, Timberland PRO, Caterpillar
+          (CAT), Eastside Golf, Quiksilver, Roxy, RVCA, Billabong, Element,
+          FILA, HEAD, HIND - active and outdoor licensed apparel.
+      - name: Licensed Apparel - Contemporary / Fashion
+        description: >-
+          Kate Spade New York, Coach, Michael Kors, Lucky Brand, Juicy
+          Couture, Kenneth Cole (historic), Frye, Bebe, Betsey Johnson,
+          Jessica Simpson, Kensie, Vince Camuto, Zac Posen, Kurt Geiger,
+          AllSaints accessories - contemporary and fashion licensed lines.
+      - name: Licensed Apparel - Premium Streetwear
+        description: >-
+          Off-White, Palm Tree Crew (JV January 2026), John Elliott,
+          MESSI - premium and streetwear collaborations.
+      - name: Licensed Apparel - Other
+        description: >-
+          Airwalk, GAP (accessories), Guess, Janie and Jack, Faherty,
+          Dickies, Dockers, Schitt's Creek, US Army - additional
+          licensed apparel and accessories labels.
+      - name: Entertainment Licensing - Disney / Marvel / Lucasfilm
+        description: >-
+          Disney, Disney Princess, Mickey Mouse, Minnie Mouse, Marvel,
+          Avengers, Spider-Man, Spidey and His Amazing Friends, Lucas
+          (Star Wars), Frozen II, Vampirina, Pixar (Cars, Toy Story 4) -
+          The Walt Disney Company-owned IP across apparel, accessories,
+          and beauty.
+      - name: Entertainment Licensing - Warner Bros / DC
+        description: >-
+          Warner Brothers, DC, DC Superhero Girls, Batman, Superman,
+          Wonder Woman, Justice League, Looney Tunes (implicit),
+          Space Jam, The Hershey Company collaborations.
+      - name: Entertainment Licensing - NBCUniversal / Nickelodeon
+        description: >-
+          NBCUniversal, Universal, Jurassic World, Minions, Paramount
+          Pictures, Nickelodeon, SpongeBob SquarePants, Teenage Mutant
+          Ninja Turtles, Paw Patrol, Dora the Explorer (historic),
+          Blippi, PJ Masks, Peppa Pig, Pinkfong/Baby Shark.
+      - name: Entertainment Licensing - Toy / Game IP
+        description: >-
+          Hasbro, Mattel, Barbie, Hot Wheels, NERF, L.O.L. Surprise!,
+          MGA Entertainment, Rainbow High, Spin Master, Trolls,
+          Pokémon, Nintendo, Minecraft, Roblox-adjacent Adopt Me,
+          Sanrio, Sesame Street.
+      - name: Entertainment Licensing - Streaming / Influencer
+        description: >-
+          Netflix, Cobra Kai, Stranger Things (implicit), JoJo Siwa,
+          Ryan's World, Love Diana, Cocomelon, Pocket Watch IP -
+          streaming-era and creator-economy licenses.
+      - name: Entertainment Licensing - CPG / Food / Beverage
+        description: >-
+          The Hershey Company, Kellogg's, General Mills, Hostess,
+          Tootsie Roll, Pepsi, Dr Pepper, Doritos, Cheetos, M&Ms,
+          Mars, PEZ, Peeps, Just Born, Ferrara Candy, Halls, Crayola,
+          Bob Ross, Dr. Seuss Enterprises, The Elf on the Shelf.
+      - name: Sports Licensing
+        description: >-
+          NFL, MLB, NBA, NHL, NCAA, MLS, WWE, Monster Jam licensed
+          accessories, headwear, and apparel via the Sports &
+          Entertainment Licensing Group (per Centric Brands' own
+          group naming, though the public Sports landing page is
+          currently 404).
+  - type: UseCases
+    data:
+      - name: Licensed Brand Product Development
+        description: >-
+          Centric designs, sources, manufactures, and distributes
+          apparel and accessories under multi-year license agreements
+          with brand owners such as Calvin Klein, Tommy Hilfiger,
+          Spyder, and Coach.
+      - name: Owned-Brand Wholesale & DTC
+        description: >-
+          Owned brands (Hudson, Buffalo, Robert Graham, Hervé Léger,
+          Joe's Jeans, Favorite Daughter) sold through department
+          stores, specialty retail, and 11 owned e-commerce sites.
+      - name: Entertainment Character Licensing
+        description: >-
+          Manufacturer-of-record for 70+ entertainment IPs producing
+          kids' apparel, beauty, accessories, sleepwear, and hosiery
+          for mass-market and specialty retail.
+      - name: Sports League / Team Licensing
+        description: >-
+          Sports & Entertainment Licensing Group produces league-
+          licensed accessories and headwear for the major U.S. sports
+          leagues and NCAA.
+      - name: Strategic Brand Joint Ventures
+        description: >-
+          Centric forms JVs to build new brands - e.g., the January
+          2026 Palm Tree Crew joint venture (Kygo lifestyle label) and
+          the Claire's strategic licensing partnership.
+      - name: Brand Acquisitions
+        description: >-
+          Inorganic growth via brand acquisitions, e.g., Jennifer
+          Fisher (early 2024); historic portfolio rebuilt post-Chapter
+          11 around higher-margin owned labels.
+  - type: Integrations
+    data:
+      - name: Mass Retail Distribution
+        description: >-
+          Wholesale distribution to U.S. mass and mid-tier retailers
+          including Target, Walmart, Kohl's, JCPenney, Macy's, Costco,
+          and Sam's Club.
+      - name: Department Store Distribution
+        description: >-
+          Nordstrom, Bloomingdale's, Saks, Neiman Marcus, Dillard's
+          for premium owned brands and contemporary licensed lines.
+      - name: Specialty / Off-Price Distribution
+        description: >-
+          TJX (TJ Maxx, Marshalls), Ross, Burlington for off-price
+          and clearance channels.
+      - name: International Wholesale
+        description: >-
+          EMEA and Asia distribution via London, Amsterdam, Hong Kong,
+          and China offices into Europe, Middle East, and APAC retail.
+      - name: Brand Owner Licensors
+        description: >-
+          Long-term royalty agreements with PVH (Calvin Klein, Tommy
+          Hilfiger, IZOD, Van Heusen, Chaps), Authentic Brands Group
+          (Spyder, Juicy Couture, Lucky Brand, Nautica historical),
+          Tapestry (Coach, Kate Spade), Capri (Michael Kors).
+      - name: Entertainment Licensors
+        description: >-
+          IP licensing relationships with Disney, Warner Bros.
+          Discovery, NBCUniversal, Paramount, Sony, Netflix, Hasbro,
+          Mattel, Nintendo, Sanrio, Spin Master, MGA Entertainment.
+      - name: Sports League Licensors
+        description: >-
+          NFL Properties, MLB Properties, NBA Properties, NHL Enterprises,
+          CLC (College Licensing Company / NCAA), WWE, Monster Jam.
+      - name: Compliance Partnerships
+        description: >-
+          International Labor Organization and Better Work program
+          partnerships for factory monitoring and worker welfare
+          across Asia sourcing base.
+  - type: Solutions
+    data:
+      - name: Accessories Group
+        description: >-
+          40+ brand portfolio across handbags, small leather goods,
+          watches, eyewear, hosiery, and headwear; the company's
+          largest division.
+      - name: Men's Apparel Portfolio
+        description: >-
+          13 brands including Avirex, MESSI, Buffalo Jeans, Eastside
+          Golf, Hudson Jeans, IZOD, Joe's Jeans, John Elliott,
+          Off-White, Palm Tree Crew, Robert Graham, Airwalk, CAT.
+      - name: Women's Apparel Portfolio
+        description: >-
+          Buffalo Jeans, Favorite Daughter, Hervé Léger, Hudson Jeans,
+          Joe's Jeans, Palm Tree Crew, Robert Graham - premium and
+          contemporary women's labels.
+      - name: Kids Division Portfolio
+        description: >-
+          24+ kids' brands including Calvin Klein, Tommy Hilfiger,
+          Nautica, IZOD, Spyder, Lucky Brand, Juicy Couture,
+          Caterpillar, Chaps, Timberland, Under Armour, Van Heusen,
+          Quiksilver, Roxy, RVCA, Dickies, Dockers, Faherty, Gap,
+          Guess, Janie and Jack, Billabong, Hudson, Pastourelle,
+          Blueberi Boulevard, Bass, Kids Headquarters, Off-White,
+          Vingino, CK Baby, Messi, Claire's, A Star Is Born.
+      - name: Entertainment Licensed Portfolio
+        description: >-
+          70+ entertainment, character, and CPG IPs licensed across
+          accessories, beauty, kids apparel, sleepwear, and bath.
+      - name: Sports Licensed Portfolio
+        description: >-
+          NFL, MLB, NBA, NHL, NCAA, MLS, WWE accessories and headwear.
+      - name: Beauty Portfolio
+        description: >-
+          70+ character/CPG IPs adapted to bath, beauty, cosmetics,
+          and personal-care SKUs for mass-market kids and gift
+          channels.
+  - type: Leadership
+    data:
+      - name: Jason Rabin - CEO
+        description: >-
+          Chief Executive Officer of Centric Brands LLC and a member
+          of the Board of Directors since October 2018; led the
+          company through Chapter 11 and post-emergence rebuild.
+      - name: Anurup Pruthi - CFO
+        description: >-
+          Chief Financial Officer since November 2018.
+      - name: Mike Yerkes - COO
+        description: >-
+          Chief Operating Officer since January 2025; leads Supply
+          Chain, Business Operations, IT, ESG Compliance, and
+          Facilities.
+      - name: Joe Favuzza - CSO & President, Business Development
+        description: >-
+          Chief Strategy Officer and President of Business
+          Development; oversees corporate development and M&A.
+      - name: Jarrod Kahn - Group President, Accessories
+        description: >-
+          Group President of Accessories since October 2018.
+      - name: Rob Smith - President, Kids
+        description: >-
+          President of the Kids Division across all global brands
+          and categories.
+      - name: Brent Unger - President, Lifestyle
+        description: >-
+          President of the Lifestyle Division since October 2023.
+      - name: Janice Brown - President, Sports & Entertainment Licensing
+        description: >-
+          President of Sports & Entertainment Licensing since
+          October 2018.
+      - name: Andrew Berg - President, Luxury & Streetwear
+        description: >-
+          President of premium brands overseeing Robert Graham,
+          Avirex, Off White, and Hervé Léger.
+      - name: Karen Coe - CHRO
+        description: >-
+          Chief Human Resources Officer since October 2018.
+      - name: Marc Compagnon - President, Asia
+        description: >-
+          President of Centric Brands LLC, Asia, since March 2022.
+      - name: Marc Goldfarb - EVP & General Counsel
+        description: >-
+          Executive Vice President and General Counsel since August
+          2022.
+      - name: Will van Rensburg - Managing Director, EMEA
+        description: >-
+          Managing Director, EMEA; responsible for strengthening
+          brand positioning and expanding presence across Europe.
+  - type: Offices
+    data:
+      - name: New York - Headquarters
+        description: 350 Fifth Avenue, New York, NY 10118 (Empire State Building).
+      - name: Los Angeles
+        description: 1580 Jesse Street, Los Angeles, CA 90021.
+      - name: Greensboro
+        description: 620 S. Elm Street, Greensboro, NC 27406 - 3D design and art studio.
+      - name: Montreal
+        description: 400 Sauve Ouest, Montreal, Quebec, H3L 1Z8.
+      - name: London
+        description: 20 Hammersmith Broadway, London W6 7AF, UK - EMEA HQ.
+      - name: Amsterdam
+        description: Locatellikade 1, 1076 AZ Amsterdam, Netherlands.
+      - name: Ermelo, Netherlands
+        description: Mariënhoef 6, 3851 ST Ermelo, Netherlands.
+      - name: Hong Kong
+        description: Unit 903, 9/F, Tower 2, The Quayside, 77 Hoi Bun Road, Kwun Tong.
+      - name: China - Multiple
+        description: Guangzhou, Hangzhou, Qingdao, Shanghai, Shenzhen, Zhuji sourcing offices.
+      - name: Bangladesh / Cambodia / India / Vietnam
+        description: Additional South Asia and Southeast Asia sourcing offices.
+  - type: CorporateHistory
+    data:
+      - name: 2018 - Formation
+        description: >-
+          October 2018 - Differential Brands Group (NASDAQ: DFBG), itself
+          formed from the 2015 merger of Joe's Jeans Inc. and Hudson
+          Holdings, acquired Global Brands Group's $1.2B North American
+          licensing business and rebranded as Centric Brands.
+      - name: 2020 - Chapter 11 Filing
+        description: >-
+          May 18, 2020 - Centric Brands and 25 affiliates filed for
+          Chapter 11 protection in the Southern District of New York,
+          citing COVID-19 retail disruption on top of a heavy debt load
+          inherited from the 2018 acquisition.
+      - name: 2020 - Emergence
+        description: >-
+          October 2020 - Centric emerged from Chapter 11 with roughly
+          $700M of debt eliminated. Secured creditors led by Blackstone's
+          GSO Capital Partners, Ares Management, and HPS Investment
+          Partners took control via debt-for-equity swap; Centric became
+          a privately held company.
+      - name: 2022-2024 - Post-Emergence Expansion
+        description: >-
+          Added new licenses and acquired Jennifer Fisher (early 2024);
+          expanded EMEA leadership; Marc Compagnon appointed President,
+          Asia (March 2022); Brent Unger elevated to President, Lifestyle
+          (October 2023).
+      - name: 2025 - Operations Leadership
+        description: >-
+          January 2025 - Mike Yerkes appointed COO, consolidating Supply
+          Chain, IT, ESG Compliance, and Facilities.
+      - name: 2026 - New Partnerships
+        description: >-
+          January 2026 - Palm Tree Crew joint venture launched; February
+          2026 - Hudson Jeans named Danielle and Alix in-house stylists;
+          May 2026 - new licensing deals for Vanessa Hudgens' A Star Is
+          Born kids brand. Strategic licensing partnership with Claire's
+          ongoing.
+  - type: NotableAbsences
+    data:
+      - name: No Public API Program
+        description: >-
+          Centric Brands publishes no developer portal, no API
+          documentation, no OpenAPI/AsyncAPI specs, and no public SDKs.
+          Wholesale and licensor data exchange happens via EDI and
+          private partner systems, not public REST APIs.
+      - name: No Public Source Code
+        description: >-
+          Both namesake GitHub orgs (github.com/centric-brands,
+          github.com/Centricbrands) exist as empty placeholders with
+          zero public repositories.
+      - name: No Public Pricing or Status Page
+        description: >-
+          As a wholesale/licensing operator (not a SaaS vendor),
+          Centric Brands has no public price list, rate limits, or
+          status page.
+      - name: No Public Financials Since Going Private
+        description: >-
+          Following October 2020 emergence under PE ownership,
+          Centric no longer files SEC reports; the Sports landing
+          page and several category pages on the corporate site
+          currently return 404.
+      - name: No Investor Relations Surface
+        description: >-
+          As a privately held PE-owned company, Centric has no
+          investor relations site, no earnings calls, and no annual
+          report disclosure.
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    url: http://apievangelist.com
