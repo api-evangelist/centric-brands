@@ -2,20 +2,13 @@
   "repo": "centric-brands",
   "feeds": [
     {
-      "source": "https://centricbrands.com/feed/",
-      "feed_url": "https://centricbrands.com/feed/",
-      "title": "",
-      "saved": 1,
-      "method": "feed"
-    },
-    {
-      "source": "https://centricbrands.com/offices/",
-      "feed_url": "https://centricbrands.com/feed/",
-      "title": "",
+      "source": "https://centricbrands.com/news/",
+      "feed_url": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "agent-scrape"
     }
   ],
   "post_count": 1,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:31:14Z",
+  "agent_pulled": "2026-06-27"
 }
