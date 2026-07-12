@@ -52,6 +52,8 @@ tags:
   - Private Equity Owned
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/centric-brands-domain-security.yml
   - type: Portal
     url: https://www.centricbrands.com
   - type: About
