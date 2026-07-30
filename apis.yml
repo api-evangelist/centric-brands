@@ -30,6 +30,17 @@ description: >-
   no documented public APIs, and no public source code repositories;
   its two namesake GitHub organizations (centric-brands, Centricbrands)
   are private placeholders with zero public repos.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 image: https://avatars.githubusercontent.com/u/192396914?v=4
 url: https://www.centricbrands.com
 modified: '2026-05-23'
