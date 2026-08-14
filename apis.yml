@@ -26,10 +26,14 @@ description: >-
   Paw Patrol, and the NFL/MLB/NBA/NHL via Sports & Entertainment
   Licensing. Centric Brands operates "11 end-to-end Ecommerce sites,"
   a 3D design and art studio in Greensboro, and a New York City
-  photo/video studio. The company has no public developer program,
-  no documented public APIs, and no public source code repositories;
-  its two namesake GitHub organizations (centric-brands, Centricbrands)
-  are private placeholders with zero public repos.
+  photo/video studio. Centric Brands runs no corporate developer
+  program - no portal, no API reference, no OpenAPI/AsyncAPI, no SDKs, and no
+  first-party public source (github.com/centric-brands has zero public repos;
+  github.com/Centricbrands has one, a third-party fork). Its callable surface
+  is retail, not corporate: as of August 2026 eight Centric-operated
+  owned-brand storefronts serve a live Universal Commerce Protocol (UCP) MCP
+  server at /api/ucp/mcp with 13 anonymous agent tools, advertised via
+  /.well-known/ucp and /llms.txt on every brand host.
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -43,7 +47,7 @@ accessModel:
   method: derived
 image: https://avatars.githubusercontent.com/u/192396914?v=4
 url: https://www.centricbrands.com
-modified: '2026-05-23'
+modified: '2026-08-13'
 created: '2026-05-23'
 specificationVersion: '0.20'
 tags:
@@ -61,10 +65,73 @@ tags:
   - Consumer Products
   - Fortune 1000
   - Private Equity Owned
-apis: []
+apis:
+  - name: Centric Brands Owned-Brand Storefront Commerce (UCP / MCP)
+    description: >-
+      The agent-facing commerce surface Centric Brands operates across eight of
+      its owned-brand direct-to-consumer storefronts (Hudson Jeans, Joe's Jeans,
+      Favorite Daughter, Buffalo David Bitton, Avirex, Hervé Léger, Zac Posen,
+      Robert Graham). Each store implements the Universal Commerce Protocol (UCP)
+      over MCP: an anonymous JSON-RPC tools/list returns 13 tools with full JSON
+      Schema inputs covering catalog search and lookup, cart construction,
+      checkout, and order retrieval, with buyer approval required to complete
+      payment. Discoverable at /.well-known/ucp and /llms.txt on every brand
+      host. The server is Shopify platform infrastructure served from
+      Centric-operated hosts, not software Centric Brands authored — the
+      corporate entity publishes no developer program of its own.
+    humanURL: https://www.hudsonjeans.com/llms.txt
+    baseURL: https://www.hudsonjeans.com/api/ucp/mcp
+    tags:
+      - Agent Commerce
+      - MCP
+      - UCP
+      - Shopify
+      - Retail
+      - Apparel
+    properties:
+      - type: MCPServer
+        url: mcp/centric-brands-mcp.yml
+      - type: LLMsTxt
+        url: https://www.hudsonjeans.com/llms.txt
+      - type: WellKnown
+        url: https://www.hudsonjeans.com/.well-known/ucp
+      - type: Authentication
+        url: authentication/centric-brands-authentication.yml
+      - type: OAuthScopes
+        url: scopes/centric-brands-scopes.yml
+      - type: Conventions
+        url: conventions/centric-brands-conventions.yml
+      - type: RateLimits
+        url: rate-limits/centric-brands-rate-limits.yml
 common:
+  - type: MCPServer
+    url: mcp/centric-brands-mcp.yml
+  - type: LLMsTxt
+    url: llms/centric-brands-llms.txt
+  - type: WellKnown
+    url: well-known/centric-brands-well-known.yml
+  - type: Authentication
+    url: authentication/centric-brands-authentication.yml
+  - type: OAuthScopes
+    url: scopes/centric-brands-scopes.yml
+  - type: Conformance
+    url: conformance/centric-brands-conformance.yml
+  - type: Conventions
+    url: conventions/centric-brands-conventions.yml
+  - type: RateLimits
+    url: rate-limits/centric-brands-rate-limits.yml
+  - type: Plans
+    url: plans/centric-brands-plans-pricing.yml
+  - type: Packages
+    url: packages/centric-brands-packages.yml
   - type: DomainSecurity
     url: security/centric-brands-domain-security.yml
+  - type: TermsOfService
+    url: https://www.centricbrands.com/terms-and-conditions
+  - type: PrivacyPolicy
+    url: https://www.centricbrands.com/privacy-policy
+  - type: OwnedBrands
+    url: https://www.centricbrands.com/owned-brands
   - type: Portal
     url: https://www.centricbrands.com
   - type: About
@@ -473,17 +540,36 @@ common:
           ongoing.
   - type: NotableAbsences
     data:
-      - name: No Public API Program
+      - name: No Corporate Developer Program
         description: >-
           Centric Brands publishes no developer portal, no API
           documentation, no OpenAPI/AsyncAPI specs, and no public SDKs.
           Wholesale and licensor data exchange happens via EDI and
-          private partner systems, not public REST APIs.
-      - name: No Public Source Code
+          private partner systems, not public REST APIs. The one callable
+          surface the company operates - the UCP/MCP agent-commerce endpoint
+          on its owned-brand storefronts - is Shopify platform infrastructure
+          it did not author, not a Centric-built API.
+      - name: Unconfigured api. Subdomain
         description: >-
-          Both namesake GitHub orgs (github.com/centric-brands,
-          github.com/Centricbrands) exist as empty placeholders with
-          zero public repositories.
+          https://api.centricbrands.com resolves and returns HTTP 200, but
+          the body is the stock "Cloudways PHP Hosting" placeholder page
+          marked noindex,nofollow. Every API path probed against it
+          (/openapi.json, /swagger.json, /graphql, /api-docs, /docs,
+          /.well-known/agent-card.json) returned 404 on 2026-08-13. It is a
+          parked hosting slot, not an API host.
+      - name: No First-Party Public Source Code
+        description: >-
+          github.com/centric-brands has zero public repositories.
+          github.com/Centricbrands has exactly one - claude-plugins-official -
+          and it is a fork of a fork of Anthropic's plugin directory with no
+          Centric-authored commits, so the company still publishes no
+          first-party open source.
+      - name: No security.txt or Agent Card
+        description: >-
+          /.well-known/security.txt, /.well-known/agent-card.json and
+          /.well-known/agent.json return 404 on the corporate host and on
+          all eight owned-brand storefront hosts. There is no published
+          vulnerability disclosure contact and no A2A agent card.
       - name: No Public Pricing or Status Page
         description: >-
           As a wholesale/licensing operator (not a SaaS vendor),
@@ -504,3 +590,8 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
     url: http://apievangelist.com
+x-enrichment:
+  date: '2026-08-13'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1
