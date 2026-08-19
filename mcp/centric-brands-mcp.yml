@@ -1,0 +1,195 @@
+generated: '2026-08-13'
+method: probed
+status: published
+source: https://www.hudsonjeans.com/api/ucp/mcp
+notes: >-
+  Centric Brands publishes no corporate developer program, but eight of its
+  owned-brand direct-to-consumer storefronts run a live Universal Commerce
+  Protocol (UCP) MCP server. tools/list was POSTed anonymously to each host on
+  2026-08-13 and every one returned HTTP 200 with the same 13 UCP shopping tools
+  and full JSON Schema inputs. Tool schemas are captured verbatim from
+  www.hudsonjeans.com in centric-brands-ucp-mcp-tools.json.
+  PROVENANCE: the server is Shopify platform infrastructure, not software Centric
+  Brands authored — it is generated for every Shopify store on the 2026-04-08 UCP
+  release. It is recorded here because it is genuinely reachable, unauthenticated,
+  and served from hosts Centric Brands legally operates (see ownership below);
+  it is NOT evidence of a Centric-built API program.
+ownership: >-
+  Each storefront's own privacy policy names a Centric operating entity — Hudson
+  Jeans, Joe's Jeans and Favorite Daughter are "part of CENTRIC WEST LLC";
+  Buffalo David Bitton and Avirex are "part of CENTRIC DENIM USA LLC"; Hervé
+  Léger and Zac Posen are "part of CENTRIC FASHION LLC" (Zac Posen's Shopify
+  handle is literally zac-posen-centric.myshopify.com). Avirex's terms of service
+  state "Centric Denim USA LLC operates this website www.avirex.com". Avirex,
+  Hudson and Robert Graham are additionally linked as owned brands from
+  https://www.centricbrands.com/owned-brands.
+server:
+  name: centric-brands-owned-brand-storefronts
+  vendor: Shopify (UCP storefront commerce)
+  transport: http
+  protocol: mcp
+  jsonrpc: '2.0'
+  url: https://www.hudsonjeans.com/api/ucp/mcp
+  discovery: https://www.hudsonjeans.com/.well-known/ucp
+  agent_instructions: https://www.hudsonjeans.com/llms.txt
+  auth:
+    read_only: none
+    transacting: buyer-approved
+  ucp_versions:
+    - '2026-04-08'
+    - '2026-01-23'
+deployment:
+  mode: remote
+  endpoint: https://www.hudsonjeans.com/api/ucp/mcp
+  auth: none
+  verified: probed
+  probe: live
+  tools: 13
+  http_status: 200
+  checked: '2026-08-13'
+  source: anonymous JSON-RPC tools/list against every owned-brand host
+fleet:
+  - brand: Hudson Jeans
+    entity: Centric West LLC
+    host: https://www.hudsonjeans.com
+    mcp: https://www.hudsonjeans.com/api/ucp/mcp
+    ucp_endpoint: https://hudsonjeans.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/1157103680
+    tools_list_status: 200
+    tools: 13
+  - brand: Joe's Jeans
+    entity: Centric West LLC
+    host: https://www.joesjeans.com
+    mcp: https://www.joesjeans.com/api/ucp/mcp
+    ucp_endpoint: https://joesjeans.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/2912321571
+    tools_list_status: 200
+    tools: 13
+  - brand: Favorite Daughter
+    entity: Centric West LLC
+    host: https://www.favoritedaughter.com
+    mcp: https://www.favoritedaughter.com/api/ucp/mcp
+    ucp_endpoint: https://shopfavoritedaughter-com.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/49159143577
+    tools_list_status: 200
+    tools: 13
+  - brand: Buffalo David Bitton
+    entity: Centric Denim USA LLC
+    host: https://www.buffalojeans.com
+    mcp: https://www.buffalojeans.com/api/ucp/mcp
+    ucp_endpoint: https://buffalo-jeans-us.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/50430541978
+    tools_list_status: 200
+    tools: 13
+  - brand: Avirex
+    entity: Centric Denim USA LLC
+    host: https://www.avirex.com
+    mcp: https://www.avirex.com/api/ucp/mcp
+    ucp_endpoint: https://avirex-com.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/25513853021
+    tools_list_status: 200
+    tools: 13
+  - brand: Hervé Léger
+    entity: Centric Fashion LLC
+    host: https://www.herveleger.com
+    mcp: https://www.herveleger.com/api/ucp/mcp
+    ucp_endpoint: https://herve-leger-us.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/44961398952
+    tools_list_status: 200
+    tools: 13
+  - brand: Zac Posen
+    entity: Centric Fashion LLC
+    host: https://www.zacposen.com
+    mcp: https://www.zacposen.com/api/ucp/mcp
+    ucp_endpoint: https://zac-posen-centric.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/65643970780
+    tools_list_status: 200
+    tools: 13
+  - brand: Robert Graham
+    entity: Robert Graham Retail LLC (owned brand, linked from centricbrands.com/owned-brands)
+    host: https://www.robertgraham.us
+    mcp: https://www.robertgraham.us/api/ucp/mcp
+    ucp_endpoint: https://robertgraham.myshopify.com/api/ucp/mcp
+    oidc_issuer: https://shopify.com/authentication/3091202094
+    tools_list_status: 200
+    tools: 13
+not_reachable:
+  - brand: SWIMS
+    host: https://www.swims.com
+    mcp: https://www.swims.com/api/ucp/mcp
+    tools_list_status: 403
+    note: >-
+      The storefront serves /.well-known/ucp with HTTP 200 but the MCP endpoint
+      answered 403 to an anonymous tools/list on 2026-08-13 — edge bot protection,
+      not an absent surface. Not counted as a working agent surface.
+tools:
+  - name: search_catalog
+    category: catalog
+    description: >-
+      Search the store catalog with natural-language queries and/or structured
+      filters; paginated. Implements dev.ucp.shopping.catalog.search.
+  - name: lookup_catalog
+    category: catalog
+    description: >-
+      Look up specific catalog items by identifier. Implements
+      dev.ucp.shopping.catalog.lookup.
+  - name: get_product
+    category: catalog
+    description: Retrieve a single product, including variants and options.
+  - name: create_cart
+    category: cart
+    description: Create a cart from line items.
+  - name: get_cart
+    category: cart
+    description: Read a cart including line items, totals, and discounts.
+  - name: update_cart
+    category: cart
+    description: Add, remove, or change cart line items and buyer information.
+  - name: cancel_cart
+    category: cart
+    description: Cancel/discard a cart.
+  - name: create_checkout
+    category: checkout
+    description: Create a checkout from a cart or line items.
+  - name: get_checkout
+    category: checkout
+    description: >-
+      Read checkout details including line items, totals, discounts, and taxes.
+      Prices are integers in ISO 4217 minor units paired with a currency code.
+  - name: update_checkout
+    category: checkout
+    description: Set shipping address, shipping method, and buyer details on a checkout.
+  - name: complete_checkout
+    category: checkout
+    description: >-
+      Finalize a purchase. Requires contemporaneous buyer approval of payment —
+      agents must not complete payment without explicit buyer consent.
+  - name: cancel_checkout
+    category: checkout
+    description: Cancel an in-progress checkout.
+  - name: get_order
+    category: order
+    description: Retrieve an order for tracking after checkout completion.
+capabilities:
+  - dev.ucp.shopping.checkout
+  - dev.ucp.shopping.fulfillment
+  - dev.ucp.shopping.discount
+  - dev.ucp.shopping.cart
+  - dev.ucp.shopping.order
+  - dev.ucp.shopping.catalog.search
+  - dev.ucp.shopping.catalog.lookup
+  - dev.shopify.catalog
+payment_handlers:
+  - com.google.pay
+  - dev.shopify.card
+  - dev.shopify.shop_pay
+schemas:
+  tools_list: mcp/centric-brands-ucp-mcp-tools.json
+  merchant_profile: well-known/centric-brands-ucp.json
+  openrpc: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+x-evidence:
+  fetched: '2026-08-13'
+  method: POST tools/list (JSON-RPC 2.0), no credentials
+  hosts_probed: 9
+  hosts_returning_tools: 8
+  http_status: 200

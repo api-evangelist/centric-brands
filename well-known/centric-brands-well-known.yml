@@ -1,0 +1,176 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTP probes of the corporate host and every owned-brand storefront host
+notes: >-
+  Two very different results on one company. The corporate host
+  www.centricbrands.com (Squarespace) returns 404 on every /.well-known/ path
+  probed — its catch-all answers with the site's HTML 404 page, so nothing there
+  is a document. The owned-brand DTC storefronts (Shopify) serve real JSON at
+  /.well-known/ucp, /.well-known/openid-configuration and
+  /.well-known/oauth-authorization-server on all eight hosts checked. Saved
+  documents in this directory are the verbatim www.hudsonjeans.com copies; the
+  other seven hosts return the same shape with a per-store Shopify shop id.
+hosts:
+  - host: https://www.centricbrands.com
+    role: corporate
+    platform: Squarespace
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+        note: HTML 404 shell, not a document
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        note: HTML 404 shell, not a document
+      - path: /.well-known/api-catalog
+        status: 404
+        note: HTML 404 shell, not a document
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        note: HTML 404 shell, not a document
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://www.hudsonjeans.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+        file: centric-brands-ucp.json
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: centric-brands-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: centric-brands-oauth-authorization-server.json
+      - path: /llms.txt
+        status: 200
+        file: llms/centric-brands-hudson-jeans-llms.txt
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: https://www.joesjeans.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.favoritedaughter.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.buffalojeans.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.avirex.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.herveleger.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.zacposen.com
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.robertgraham.us
+    role: owned-brand storefront
+    platform: Shopify
+    documents:
+      - path: /.well-known/ucp
+        status: 200
+      - path: /.well-known/openid-configuration
+        status: 200
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+      - path: /llms.txt
+        status: 200
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://api.centricbrands.com
+    role: unconfigured subdomain
+    platform: Cloudways / nginx
+    documents:
+      - path: /
+        status: 200
+        note: >-
+          Serves the stock "Cloudways PHP Hosting" placeholder page with
+          noindex,nofollow — an unconfigured application, not an API. Every API
+          path probed (/openapi.json, /swagger.json, /graphql, /api-docs, /docs,
+          /v1/openapi.json, /.well-known/agent-card.json) returned 404.
+      - path: /openapi.json
+        status: 404
+      - path: /graphql
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+security_txt: false
+agent_card: false

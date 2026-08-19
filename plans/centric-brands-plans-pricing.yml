@@ -1,0 +1,24 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.centricbrands.com
+notes: >-
+  Centric Brands sells apparel and accessories, not API access. There is no
+  developer plan, no API pricing page, no free tier, and no "contact sales for
+  API access" form — the corporate site has no developer surface at all. The
+  callable surface it does operate (the UCP MCP servers on its owned-brand DTC
+  storefronts) is free and unmetered to anonymous agents for reads; the only
+  money that changes hands is a buyer-approved retail purchase at storefront
+  product prices. Recorded as an explicit zero rather than omitted.
+plan_count: 0
+plans: []
+free_tier: null
+enterprise_only: false
+verified:
+  checked: '2026-08-13'
+  evidence:
+    - url: https://www.centricbrands.com
+      status: 200
+      note: No pricing, developer, or API navigation anywhere in the sitemap (167 URLs).
+    - url: https://www.hudsonjeans.com/api/ucp/mcp
+      status: 200
+      note: Anonymous tools/list succeeded with no key, plan, or quota.

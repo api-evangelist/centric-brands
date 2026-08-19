@@ -1,0 +1,85 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  https://www.hudsonjeans.com/.well-known/ucp,
+  https://www.hudsonjeans.com/.well-known/openid-configuration,
+  https://www.hudsonjeans.com/.well-known/oauth-authorization-server,
+  https://www.hudsonjeans.com/api/ucp/mcp
+notes: >-
+  Cross-cutting standards the Centric Brands owned-brand storefront surface
+  conforms to, read from live discovery documents and a live anonymous MCP
+  tools/list. Conformance is inherited from the Shopify platform, not
+  independently implemented by Centric Brands; the corporate host
+  www.centricbrands.com conforms to none of these because it publishes no API.
+standards:
+  - id: ucp
+    conforms: true
+    evidence: >-
+      /.well-known/ucp returns a merchant profile advertising the
+      dev.ucp.shopping service at versions 2026-04-08 and 2026-01-23 with an MCP
+      transport endpoint, on all 8 probed brand hosts.
+  - id: mcp
+    conforms: true
+    evidence: >-
+      POST /api/ucp/mcp with JSON-RPC 2.0 tools/list returned HTTP 200 and 13
+      tools with JSON Schema 2020-12 inputSchemas (2026-08-13).
+  - id: jsonrpc-2.0
+    conforms: true
+    evidence: MCP transport responses carry "jsonrpc":"2.0" with matching request ids.
+  - id: json-schema-2020-12
+    conforms: true
+    evidence: >-
+      Every tool inputSchema declares
+      $schema https://json-schema.org/draft/2020-12/schema.
+  - id: oidc
+    conforms: true
+    evidence: >-
+      /.well-known/openid-configuration returns issuer
+      shopify.com/authentication/<shop-id> with jwks_uri, RS256 id_token signing,
+      and OIDC claims.
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      authorization_code and refresh_token grants with client_secret_basic token
+      endpoint auth.
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported includes S256.
+  - id: rfc8414-oauth-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns 200 with RFC 8414 metadata.
+  - id: iso4217-money
+    conforms: true
+    evidence: >-
+      Tool descriptions specify integer minor units paired with an ISO 4217
+      currency code, e.g. {"amount": 600, "currency": "USD"}.
+  - id: llms-txt
+    conforms: true
+    evidence: >-
+      /llms.txt returns text/markdown agent instructions on all 8 brand hosts;
+      the canonical copy is mirrored at /agents.md (also 200).
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: >-
+      /.well-known/security.txt returns 404 on the corporate host and on every
+      brand host.
+  - id: a2a-agent-card
+    conforms: false
+    evidence: >-
+      /.well-known/agent-card.json and /.well-known/agent.json return 404 on
+      every host probed.
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No OpenAPI or Swagger document found on the corporate host, the
+      api.centricbrands.com subdomain, or any brand host.
+  - id: rfc9457-problem-details
+    conforms: false
+  - id: asyncapi
+    conforms: false
+compliance_claims:
+  published: false
+  note: >-
+    No trust center, SOC 2 / ISO 27001 / PCI attestation page, or security
+    program page is published on www.centricbrands.com. Card handling on the
+    storefronts is Shopify's (the merchant is not the PCI processor of record).

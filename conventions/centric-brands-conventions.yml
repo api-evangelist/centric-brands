@@ -1,0 +1,88 @@
+generated: '2026-08-13'
+method: derived
+source: >-
+  mcp/centric-brands-ucp-mcp-tools.json,
+  llms/centric-brands-hudson-jeans-llms.txt,
+  well-known/centric-brands-ucp.json
+notes: >-
+  Runtime semantics of the only callable Centric Brands surface — the UCP MCP
+  storefront servers on its owned-brand DTC sites. Derived from the verbatim
+  tools/list schemas and the provider-served agent instructions; nothing here is
+  invented. These are Shopify/UCP platform conventions as deployed on
+  Centric-operated hosts.
+auth:
+  style: none for reads; OAuth 2.0 / OIDC (Shopify Customer Accounts) for buyer-scoped access
+  agent_identity: >-
+    Every tool call requires a meta.ucp-agent.profile URI in the request — an
+    agent profile URI for UCP discovery, not a credential. It is a required
+    property on all 13 tools.
+  payment_approval: >-
+    complete_checkout requires contemporaneous buyer approval of payment. The
+    provider's llms.txt states agents "must not complete payment without
+    explicit buyer consent" and directs agents without a live approval channel
+    to route through the Shop skill (https://shop.app/SKILL.md).
+  detail: authentication/centric-brands-authentication.yml
+identifiers:
+  style: Shopify global ids (GIDs)
+  format: 'gid://shopify/<Type>/<id>'
+  example: 'gid://shopify/Checkout/abc123'
+  note: Checkout, cart, order and product ids are all opaque GID strings.
+money:
+  representation: integer minor units paired with an ISO 4217 currency code
+  shape: '{"amount": 600, "currency": "USD"}'
+  note: >-
+    600 USD means $6.00. Two-decimal currencies divide by 100 before display;
+    zero-decimal currencies such as JPY are already whole units. Stated
+    explicitly in every price-bearing tool description.
+pagination:
+  style: cursor/page parameters on catalog search
+  applies_to:
+    - search_catalog
+    - lookup_catalog
+  note: >-
+    search_catalog is paginated per the UCP catalog search capability
+    (dev.ucp.shopping.catalog.search).
+versioning:
+  scheme: dated protocol versions
+  current: '2026-04-08'
+  supported:
+    - '2026-04-08'
+    - '2026-01-23'
+  discovery: >-
+    /.well-known/ucp lists supported_versions with a per-version profile URL, so
+    an agent negotiates the version from the merchant profile rather than a
+    header.
+  detail: well-known/centric-brands-ucp.json
+errors:
+  envelope: JSON-RPC 2.0 error objects
+  problem_json: false
+  note: >-
+    No RFC 9457 problem+json. Transport-level failures surface as JSON-RPC
+    errors; 429 signals rate-limit exhaustion.
+rate_limits:
+  signaled: true
+  note: Per-IP limiting on the MCP endpoint with 429 back-off; see rate-limits/centric-brands-rate-limits.yml
+idempotency:
+  supported: false
+  note: >-
+    No idempotency key parameter appears in any of the 13 tool input schemas,
+    and the provider documents none. Safety on retry comes from the
+    create/update/complete checkout state machine, not from an idempotency
+    header.
+read_only_surface:
+  note: >-
+    The provider's llms.txt also documents unauthenticated read paths for agents
+    that do not transact.
+  endpoints:
+    - 'GET /products/{handle}.json'
+    - 'GET /collections/{handle}/products.json'
+    - 'GET /collections/all'
+    - 'GET /search?q={query}&type=product'
+    - 'GET /sitemap.xml'
+  verified: >-
+    https://www.hudsonjeans.com/products.json returned HTTP 200
+    application/json (2026-08-13).
+agent_instructions:
+  llms_txt: https://www.hudsonjeans.com/llms.txt
+  agents_md: https://www.hudsonjeans.com/agents.md
+  note: The provider states /agents.md is canonical and /llms.txt mirrors it.

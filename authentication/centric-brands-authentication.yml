@@ -1,0 +1,63 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  https://www.hudsonjeans.com/.well-known/openid-configuration,
+  https://www.hudsonjeans.com/.well-known/oauth-authorization-server,
+  https://www.hudsonjeans.com/api/ucp/mcp
+docs: https://shopify.dev/docs/api/customer
+notes: >-
+  Centric Brands publishes no corporate API and therefore no corporate auth
+  scheme. This profile describes the only authenticated surface it actually
+  operates: Shopify Customer Accounts on the owned-brand DTC storefronts,
+  read from the live OIDC and RFC 8414 discovery documents captured in
+  well-known/. Note the split posture — the UCP MCP read tools (catalog, cart,
+  checkout read) answered an anonymous JSON-RPC tools/list with HTTP 200 and no
+  credentials, while completing a payment requires contemporaneous buyer
+  approval. Values below are from www.hudsonjeans.com; the other seven brand
+  hosts return identical metadata with a per-store Shopify shop id (recorded in
+  mcp/centric-brands-mcp.yml).
+summary:
+  types:
+    - openIdConnect
+    - oauth2
+  oauth2_flows:
+    - authorizationCode
+    - refreshToken
+    - jwt-bearer
+  pkce: S256
+  token_endpoint_auth:
+    - client_secret_basic
+  anonymous_read: true
+  buyer_approval_required_for_payment: true
+schemes:
+  - name: ShopifyCustomerAccountOIDC
+    type: openIdConnect
+    issuer: https://shopify.com/authentication/1157103680
+    openIdConnectUrl: https://www.hudsonjeans.com/.well-known/openid-configuration
+    authorizationUrl: https://shopify.com/authentication/1157103680/oauth/authorize
+    tokenUrl: https://shopify.com/authentication/1157103680/oauth/token
+    endSessionUrl: https://shopify.com/authentication/1157103680/logout
+    jwksUri: https://shopify.com/authentication/1157103680/.well-known/jwks.json
+    grant_types:
+      - authorization_code
+      - refresh_token
+      - 'urn:ietf:params:oauth:grant-type:jwt-bearer'
+    code_challenge_methods:
+      - S256
+    id_token_signing_alg_values:
+      - RS256
+    sources:
+      - well-known/centric-brands-openid-configuration.json
+      - well-known/centric-brands-oauth-authorization-server.json
+  - name: UCPAnonymousMCP
+    type: none
+    description: >-
+      The UCP MCP endpoint (/api/ucp/mcp) accepts unauthenticated JSON-RPC for
+      catalog, cart and checkout construction. Every tool call carries a
+      meta.ucp-agent.profile URI identifying the calling agent rather than a
+      credential.
+    verified: >-
+      Anonymous POST tools/list returned HTTP 200 with 13 tools on 8 hosts
+      (2026-08-13).
+    sources:
+      - mcp/centric-brands-ucp-mcp-tools.json

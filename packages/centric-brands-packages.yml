@@ -1,0 +1,38 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  https://registry.npmjs.org/-/v1/search?text=centricbrands,
+  https://pypi.org/pypi/centric-brands/json,
+  https://api.github.com/orgs/centric-brands,
+  https://api.github.com/orgs/Centricbrands
+notes: >-
+  No first-party Centric Brands client library exists on any public registry.
+  npm search for "centricbrands" returned 0 results; PyPI returned 404; neither
+  namesake GitHub organization publishes source. github.com/centric-brands has 0
+  public repositories. github.com/Centricbrands has exactly 1 public repository —
+  claude-plugins-official — and it is a FORK (of kgundra1215/claude-plugins-official,
+  itself a fork of Anthropic's plugin directory), created 2026-06-17 with no
+  Centric-authored commits, so it is not first-party software and earns no SDK
+  credit. This is a checked absence, not an unchecked one.
+package_count: 0
+official_count: 0
+packages: []
+registries_checked:
+  - registry: npm
+    query: centricbrands
+    results: 0
+    status: 200
+  - registry: pypi
+    query: centric-brands
+    results: 0
+    status: 404
+  - registry: github
+    org: centric-brands
+    public_repos: 0
+    status: 200
+  - registry: github
+    org: Centricbrands
+    public_repos: 1
+    status: 200
+    note: sole repo is a third-party fork, not first-party code
+checked: '2026-08-13'

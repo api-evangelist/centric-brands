@@ -1,0 +1,83 @@
+# Centric Brands
+
+> Centric Brands LLC is a New York-headquartered global lifestyle brand management and
+> product-development platform that designs, sources, markets, and distributes apparel,
+> accessories, footwear, beauty, and entertainment-licensed products. It is privately held
+> by lenders led by Blackstone (GSO), Ares Management, and HPS Investment Partners following
+> its October 2020 emergence from Chapter 11.
+
+Generated: 2026-08-13
+Method: generated (from apis.yml plus artifacts probed live in this repo on 2026-08-13)
+Source: https://www.centricbrands.com
+
+## What is and is not callable
+
+Centric Brands publishes **no corporate developer program**: no developer portal, no API
+reference, no OpenAPI or AsyncAPI, no SDKs, and no public first-party source code. Wholesale
+and licensor data exchange runs over EDI and private partner systems.
+
+What IS callable is the **agent-commerce surface on its owned-brand direct-to-consumer
+storefronts**. Eight Centric-operated brand stores run the Shopify Universal Commerce
+Protocol (UCP) over MCP. Anonymous `tools/list` returned 13 tools with full JSON Schema
+inputs on every one of them (probed 2026-08-13). This is Shopify platform infrastructure
+served from Centric-controlled hosts — not software Centric authored.
+
+## Agent endpoints (probed 2026-08-13, HTTP 200)
+
+- Hudson Jeans — https://www.hudsonjeans.com/api/ucp/mcp (Centric West LLC)
+- Joe's Jeans — https://www.joesjeans.com/api/ucp/mcp (Centric West LLC)
+- Favorite Daughter — https://www.favoritedaughter.com/api/ucp/mcp (Centric West LLC)
+- Buffalo David Bitton — https://www.buffalojeans.com/api/ucp/mcp (Centric Denim USA LLC)
+- Avirex — https://www.avirex.com/api/ucp/mcp (Centric Denim USA LLC)
+- Hervé Léger — https://www.herveleger.com/api/ucp/mcp (Centric Fashion LLC)
+- Zac Posen — https://www.zacposen.com/api/ucp/mcp (Centric Fashion LLC)
+- Robert Graham — https://www.robertgraham.us/api/ucp/mcp (Robert Graham Retail LLC)
+
+SWIMS (https://www.swims.com) publishes /.well-known/ucp but its MCP endpoint returned 403
+to an anonymous probe.
+
+## Discovery documents
+
+- UCP merchant profile: https://www.hudsonjeans.com/.well-known/ucp
+- Agent instructions: https://www.hudsonjeans.com/llms.txt
+- OIDC discovery: https://www.hudsonjeans.com/.well-known/openid-configuration
+- OAuth 2.0 authorization server metadata: https://www.hudsonjeans.com/.well-known/oauth-authorization-server
+
+## Tools
+
+catalog: search_catalog, lookup_catalog, get_product
+cart: create_cart, get_cart, update_cart, cancel_cart
+checkout: create_checkout, get_checkout, update_checkout, complete_checkout, cancel_checkout
+order: get_order
+
+Read tools require no credentials. Completing a checkout requires contemporaneous buyer
+approval of payment; agents must not pay without explicit buyer consent.
+
+## Repository artifacts
+
+- mcp/centric-brands-mcp.yml — MCP server profile, fleet of 8 endpoints, deployment block
+- mcp/centric-brands-ucp-mcp-tools.json — verbatim tools/list response with input schemas
+- well-known/centric-brands-well-known.yml — full /.well-known probe index (corporate + brand hosts)
+- well-known/centric-brands-ucp.json — verbatim UCP merchant profile
+- well-known/centric-brands-openid-configuration.json — verbatim OIDC discovery document
+- well-known/centric-brands-oauth-authorization-server.json — verbatim RFC 8414 metadata
+- authentication/centric-brands-authentication.yml — auth profile
+- scopes/centric-brands-scopes.yml — OAuth scopes advertised by the storefront authorization servers
+- conformance/centric-brands-conformance.yml — standards conformance assertions with evidence
+- conventions/centric-brands-conventions.yml — runtime semantics (money, ids, pagination, approval)
+- rate-limits/centric-brands-rate-limits.yml — published rate-limit posture
+- plans/centric-brands-plans-pricing.yml — API plans (none published)
+- security/centric-brands-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe
+- llms/centric-brands-hudson-jeans-llms.txt — verbatim provider-served llms.txt
+
+## Corporate
+
+- Website: https://www.centricbrands.com
+- Owned brands: https://www.centricbrands.com/owned-brands
+- Leadership: https://centricbrands.com/leadership/
+- News: https://centricbrands.com/news/
+- Press releases: https://centricbrands.com/press-releases/
+- Careers: https://careers-centricbrands.icims.com/
+- Terms: https://www.centricbrands.com/terms-and-conditions
+- Privacy: https://www.centricbrands.com/privacy-policy
+- Supplier principles: https://www.centricbrands.com/global-supplier-principles

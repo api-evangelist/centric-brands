@@ -1,0 +1,27 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.hudsonjeans.com/llms.txt
+notes: >-
+  The only rate-limit statement Centric Brands' surface publishes is the one
+  line in the Shopify-generated agent instructions served on each owned-brand
+  storefront: "Respect rate limits. The MCP endpoint is rate-limited per IP.
+  Back off on 429 responses." No numeric limit, window, or burst is published,
+  and no RateLimit-* / X-RateLimit-* headers were observed on the anonymous
+  tools/list responses (2026-08-13). The corporate host publishes no API and
+  therefore no limits.
+limit_count: 0
+limits: []
+signaling:
+  scope: per-IP
+  applies_to: https://www.hudsonjeans.com/api/ucp/mcp
+  exhaustion_status: 429
+  retry_guidance: back off on 429
+  response_headers_observed: []
+  note: >-
+    limit_count is 0 because no quantified limit is published — the posture is
+    documented, the number is not. An agent must discover the ceiling by hitting
+    it.
+verified:
+  method: anonymous POST tools/list, response headers inspected
+  checked: '2026-08-13'
+  http_status: 200
