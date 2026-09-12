@@ -115,6 +115,8 @@ apis:
       - type: RateLimits
         url: rate-limits/centric-brands-rate-limits.yml
 common:
+  - type: Website
+    url: https://www.centricbrands.com/
   - type: MCPServer
     url: mcp/centric-brands-mcp.yml
   - type: LLMsTxt
