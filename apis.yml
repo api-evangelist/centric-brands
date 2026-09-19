@@ -93,6 +93,13 @@ apis:
     humanURL: https://www.hudsonjeans.com/llms.txt
     baseURL: https://www.hudsonjeans.com/api/ucp/mcp
     tags:
+      - Agentic Commerce
+      - MCP
+      - Universal Commerce Protocol
+      - Shopify
+      - Retail
+      - Apparel
+    tags_raw:
       - Agent Commerce
       - MCP
       - UCP
