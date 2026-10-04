@@ -121,6 +121,9 @@ apis:
         url: conventions/centric-brands-conventions.yml
       - type: RateLimits
         url: rate-limits/centric-brands-rate-limits.yml
+    x-surface: platform-generated
+    x-platform: shopify
+    x-platform-surface: ucp
 common:
   - type: Website
     url: https://www.centricbrands.com/
