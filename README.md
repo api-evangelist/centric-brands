@@ -64,152 +64,112 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Profile for **Centric Brands LLC** in the API Evangelist network.
+Centric Brands LLC is a New York-headquartered global lifestyle brand management and product-development platform formed in October 2018 when Differential Brands Group (NASDAQ: DFBG) acquired Global Brands Group's $1.2B North American licensing business. The company designs, sources, markets, and distributes apparel, accessories, footwear, beauty, and entertainment-licensed products across men's, women's, kids', accessories, and entertainment segments. Its mission is "to be a leading global apparel & accessories company with a portfolio of iconic licensed and owned brands that delight retailers and consumers of all ages." Centric filed for Chapter 11 bankruptcy on May 18, 2020 and emerged in October 2020 under control of secured creditors led by Blackstone's GSO Capital Partners, Ares Management, and HPS Investment Partners. The company is led by CEO Jason Rabin (since 2018) and operates ~20 global offices across New York (HQ), Los Angeles, Greensboro, Montreal, London, Amsterdam, Hong Kong, and multiple cities in China, Bangladesh, Cambodia, India, and Vietnam. Owned brands include Hudson Jeans, Buffalo Jeans, Robert Graham, Joe's Jeans, Hervé Léger, Favorite Daughter, and AllSaints; licensed apparel brands include Calvin Klein, Tommy Hilfiger, Nautica, Spyder, IZOD, Van Heusen, Kate Spade New York, Coach, Michael Kors, Frye, Timberland, Lucky Brand, Juicy Couture, Under Armour, and Off-White; the entertainment licensing portfolio spans 70+ properties including Disney, Marvel, Warner Bros., DC, Nintendo, Hasbro, Mattel, Nickelodeon, Netflix, Pokémon, Sanrio, Paw Patrol, and the NFL/MLB/NBA/NHL via Sports & Entertainment Licensing. Centric Brands operates "11 end-to-end Ecommerce sites," a 3D design and art studio in Greensboro, and a New York City photo/video studio. Centric Brands runs no corporate developer program - no portal, no API reference, no OpenAPI/AsyncAPI, no SDKs, and no first-party public source (github.com/centric-brands has zero public repos; github.com/Centricbrands has one, a third-party fork). Its callable surface is retail, not corporate: as of August 2026 eight Centric-operated owned-brand storefronts serve a live Universal Commerce Protocol (UCP) MCP server at /api/ucp/mcp with 13 anonymous agent tools, advertised via /.well-known/ucp and /llms.txt on every brand host.
 
-> "To be a leading global apparel & accessories company with a portfolio of iconic licensed and owned brands that delight retailers and consumers of all ages."
-> — Centric Brands mission statement
+**Areas:** Apparel · Accessories · Footwear · Beauty · Kids · Lifestyle · Brand Management · Licensing · Entertainment Licensing · Sports Licensing · Fashion · Consumer Products
 
-## Overview
+## Centric Brands on APIs.io
 
-Centric Brands LLC is a New York-headquartered global lifestyle brand-management
-and product-development platform. It was formed in **October 2018** when
-Differential Brands Group (NASDAQ: DFBG) — itself the 2015 merger of Joe's
-Jeans Inc. and Hudson Holdings — acquired Global Brands Group's $1.2B North
-American licensing business and rebranded as Centric Brands.
+Everything profiled for Centric Brands is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/centric-brands/](https://apis.io/providers/centric-brands/)** — or go straight to one of the APIs or properties below.
 
-The company designs, sources, markets, and distributes apparel, accessories,
-footwear, beauty, and entertainment-licensed products across **men's, women's,
-kids', accessories, entertainment, and beauty** segments. It operates roughly
-twenty offices spanning North America, Europe, and Asia, runs eleven owned
-direct-to-consumer e-commerce sites, and licenses 70+ entertainment, sports,
-and CPG properties.
+### APIs (1)
 
-- **Headquarters:** 350 Fifth Avenue, New York, NY 10118 (Empire State Building)
-- **CEO:** Jason Rabin (since October 2018)
-- **Ownership:** Private; controlled by Blackstone (GSO Capital Partners),
-  Ares Management, and HPS Investment Partners since October 2020
-  emergence from Chapter 11
-- **Fortune 1000 rank:** 957
-- **Website:** https://www.centricbrands.com
+- [Centric Brands Owned-Brand Storefront Commerce (UCP / MCP)](https://apis.io/apis/centric-brands/centric-brands-owned-brand-storefront-commerce-ucp-mcp/) — The agent-facing commerce surface Centric Brands operates across eight of its owned-brand direct-to-consumer storefronts (Hudson Jeans, Joe's Jeans,…
 
-## Post-Chapter 11 Status
+### Published properties
 
-Centric Brands filed for Chapter 11 protection on **May 18, 2020** in the
-Southern District of New York, citing COVID-19 retail disruption layered on
-the heavy debt load from the 2018 GBG transaction. It **emerged in October
-2020** with approximately $700M of debt eliminated. Secured creditors —
-led by **Blackstone's GSO Capital Partners, Ares Management, and HPS
-Investment Partners** — took control via a debt-for-equity swap, and the
-company has operated as a privately held PE-controlled business ever since,
-no longer filing SEC reports.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Operating Structure ("The 4 Cs")
+#### MCP servers (1)
 
-Centric organizes itself around four cultural pillars it calls the 4 Cs:
+Model Context Protocol servers that expose the API to agents.
 
-1. **Brand Centric** — protecting brand DNA for licensors and partners
-2. **Business Centric** — operational platform enabling end-to-end agility
-3. **Customer Centric** — consumer-driven merchandising and CX
-4. **People Centric** — talent management and unified culture
+- [centric-brands-owned-brand-storefronts](https://apis.io/servers/centric-brands/centric-brands-owned-brand-storefronts/)
 
-## Divisions
+#### Security (2)
 
-| Division | Leader | Scope |
-|---|---|---|
-| Accessories Group | Jarrod Kahn (Group President) | 40+ brand accessories portfolio |
-| Kids | Rob Smith (President) | Global kids' apparel across all brands |
-| Lifestyle | Brent Unger (President, since Oct 2023) | Mainstream lifestyle apparel |
-| Luxury & Streetwear | Andrew Berg (President) | Robert Graham, Avirex, Off-White, Hervé Léger |
-| Sports & Entertainment Licensing | Janice Brown (President, since 2018) | 70+ entertainment, sports, CPG IPs |
-| Asia | Marc Compagnon (President, since Mar 2022) | China + Southeast Asia sourcing |
-| EMEA | Will van Rensburg (Managing Director) | London + Amsterdam wholesale |
+Authentication, trust centre, and vulnerability disclosure.
 
-Executive team also includes **Anurup Pruthi** (CFO, since 2018),
-**Mike Yerkes** (COO, since Jan 2025), **Joe Favuzza** (CSO & President,
-Business Development), **Karen Coe** (CHRO, since 2018), and **Marc Goldfarb**
-(EVP & General Counsel, since Aug 2022).
+- [Centric Brands Authentication](https://apis.io/security/centric-brands/centric-brands-authentication/)
+- [Centric Brands Domain Security](https://apis.io/security/centric-brands/centric-brands-domain-security/)
 
-## Brand Portfolio
+#### OAuth scopes (1)
 
-### Owned Brands
+The permissions the API asks for.
 
-- **Denim:** Hudson Jeans, Buffalo Jeans, Joe's Jeans
-- **Premium / Streetwear:** Robert Graham, Hervé Léger, Favorite Daughter, Avirex
-- **Other:** AllSaints, Swims, Jennifer Fisher (acquired early 2024)
+- [Centric Brands Scopes](https://apis.io/scopes/centric-brands/centric-brands-scopes/)
 
-### Licensed Apparel
+#### Plans and pricing (1)
 
-- **Heritage Americana:** Calvin Klein, Tommy Hilfiger, Nautica, IZOD, Van Heusen, Chaps, Jones New York
-- **Active / Outdoor:** Spyder, Under Armour, Timberland, Timberland PRO, Caterpillar (CAT), Eastside Golf, Quiksilver, Roxy, RVCA, Billabong, Element, FILA, HEAD, HIND
-- **Contemporary / Fashion:** Kate Spade New York, Coach, Michael Kors, Lucky Brand, Juicy Couture, Frye, Bebe, Betsey Johnson, Jessica Simpson, Kensie, Vince Camuto, Zac Posen, Kurt Geiger
-- **Premium Streetwear:** Off-White, Palm Tree Crew (JV Jan 2026), John Elliott, MESSI
-- **Other:** Airwalk, GAP (accessories), Guess, Janie and Jack, Faherty, Dickies, Dockers, Schitt's Creek, US Army
+Published plans, tiers and prices.
 
-### Entertainment Licensing (70+ properties)
+- [Centric Brands Plans Pricing](https://apis.io/plans/centric-brands/centric-brands-plans-pricing/)
 
-- **Disney / Marvel / Lucasfilm:** Disney, Disney Princess, Mickey Mouse, Marvel, Avengers, Spider-Man, Star Wars (Lucas), Frozen II, Pixar (Cars, Toy Story)
-- **Warner Bros / DC:** Warner Brothers, DC, Batman, Superman, Wonder Woman, Justice League, Space Jam
-- **NBCUniversal / Nickelodeon / Paramount:** Universal, Jurassic World, Minions, Paramount, Nickelodeon, SpongeBob, TMNT, Paw Patrol, Blippi, PJ Masks, Peppa Pig, Baby Shark
-- **Toys / Games:** Hasbro, Mattel, Barbie, Hot Wheels, NERF, L.O.L. Surprise!, MGA, Rainbow High, Spin Master, Trolls, Pokémon, Nintendo, Minecraft, Sanrio, Sesame Street
-- **Streaming / Creator IP:** Netflix, Cobra Kai, JoJo Siwa, Ryan's World, Love Diana, Cocomelon
-- **CPG / Food / Beverage:** Hershey, Kellogg's, General Mills, Hostess, Tootsie Roll, Pepsi, Dr Pepper, Doritos, Cheetos, M&Ms, PEZ, Peeps, Halls, Crayola, Bob Ross, Dr. Seuss, The Elf on the Shelf
+#### Rate limits (1)
 
-### Sports Licensing
+Published request limits.
 
-NFL, MLB, NBA, NHL, NCAA, MLS, WWE, Monster Jam — produced through the
-Sports & Entertainment Licensing Group.
+- [Centric Brands Rate Limits](https://apis.io/rate-limits/centric-brands/centric-brands-rate-limits/)
 
-### Strategic Partnerships
+## Where to find this API
 
-- **Claire's** — strategic licensing partnership (multi-brand kids/accessories)
-- **A Star Is Born** — Vanessa Hudgens kids brand (license deals expanding May 2026)
-- **Palm Tree Crew** — joint venture launched January 2026 (Kygo lifestyle label)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Global Offices
+- [Website](https://www.centricbrands.com/)
+- [Blog](https://centricbrands.com/news/)
+- [Terms of service](https://www.centricbrands.com/terms-and-conditions)
+- [Privacy policy](https://www.centricbrands.com/privacy-policy)
+- [GitHub](https://github.com/centric-brands)
 
-North America: New York (HQ), Los Angeles, Greensboro NC (3D design/art studio),
-Montreal. Europe: London (EMEA HQ), Amsterdam, Ermelo (Netherlands). Asia:
-Hong Kong, plus China sourcing offices in Guangzhou, Hangzhou, Qingdao,
-Shanghai, Shenzhen, and Zhuji, with additional offices in Bangladesh,
-Cambodia, India, and Vietnam.
+## API Evangelist rating
 
-## Developer / API Surface
+**Kin Score 23.7** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**None.** Centric Brands is a wholesale brand-management and licensing
-operator, not a software vendor. There is:
+| Facet | Score |
+|---|---|
+| Discoverability | 93.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 21.1 |
 
-- No developer portal
-- No public API documentation
-- No OpenAPI, AsyncAPI, or JSON Schema artifacts
-- No public SDKs or CLIs
-- No public source code (both namesake GitHub orgs —
-  [`github.com/centric-brands`](https://github.com/centric-brands) and
-  [`github.com/Centricbrands`](https://github.com/Centricbrands) — exist
-  as empty placeholders with zero public repositories)
-- No public price list, rate limits, or status page
-- No investor relations site (private PE-owned)
+**Agent readiness 16.4** — agent-aware
 
-Wholesale and licensor data exchange is handled via EDI and private partner
-systems. This profile documents Centric's **organizational structure,
-licensing portfolio, and post-Chapter 11 status** rather than any technical
-API surface.
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
 
-## Recent Notable News (2026)
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
 
-- **May 2026:** Vanessa Hudgens' *A Star Is Born* kids' brand expands with new licensing deals
-- **February 2026:** Hudson Jeans names Danielle and Alix as in-house stylists
-- **January 2026:** Palm Tree Crew joint venture launched
-- **January 2025:** Mike Yerkes promoted to COO
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/centric-brands/](https://apis.io/providers/centric-brands/).
 
-## API Evangelist Profile
+## How this profile is made
 
-- **Repository:** https://github.com/api-evangelist/centric-brands
-- **x-type:** company
-- **Profiled:** 2026-05
-- **APIs documented:** 0
-- **Specification:** [`apis.yml`](./apis.yml)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Maintainer
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Centric Brands: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-Kin Lane · [API Evangelist](https://apievangelist.com) ·
-[info@apievangelist.com](mailto:info@apievangelist.com)
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/centric-brands/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
